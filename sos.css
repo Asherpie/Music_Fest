@@ -1,0 +1,795 @@
+@charset "UTF-8";
+
+html, body {
+	font-family: 'Maax';
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	margin-left: 50px;
+	
+}
+
+/* testing */
+/*#sound_on {	
+	background-color: #EE0003;
+	color: #3000C9;		
+}
+*/
+/*#sound_fest {
+	color: #A48E00;
+	background-color: #E800C0;
+	
+}*/
+/*fonts*/
+@font-face {
+	font-family: "Maax";
+	src: url(fonts/Maax.ttf);
+}
+@font-face {
+	font-family: "Maax Bold";
+	src: url(fonts/Maax-Bold.ttf);
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+p {
+	max-height: 0px;
+}
+.page_section {
+	width: 1000px;
+	height: 750px;
+	position: relative;
+	margin-bottom: 200px;
+	margin-top: 50px;
+}
+
+#sound_on {
+	position: absolute;
+	width: 700px;
+	transform: rotate(-37.5deg);
+	display: inline-block;
+	height: 178px;
+	float: left;
+	top: 233px;
+	left: 108px;
+	right: 0px;
+	bottom: 0px;
+	font-size: 11em;
+	color: #FFFFFF;
+	animation: .75s soundOnIn cubic-bezier(.4,.1,.02,1.29) both;
+}
+@keyframes soundOnIn {
+	0%		{transform: rotate(-37.5deg) translateX(-1000px);}
+	100%	{transform: rotate(-37.5deg) translateX(0px);}
+}
+
+#sound_fest {
+	position: absolute;
+	width: 700px;
+	height: 178px;
+	display: inline-block;
+	float: left;
+	font-size: 11em;
+	transform: rotate(142.25deg);
+	top: 325px;
+	left: 228px;
+	bottom: 0px;
+	color: #01CDA0;
+	animation: .75s soundFest cubic-bezier(.4,.1,.02,1.29) both;
+}
+@keyframes soundFest {
+	0%		{transform: rotate(142.25deg) translateX(-1000px);}
+	100%	{transform: rotate(142.25deg) translateX(0px);}
+}
+#sound_on, #sound_fest {
+	animation-delay: .25s;
+}
+.small_title_text {
+	font-size: 0.25em;
+}
+.nav_box {
+	font-family: 'Maax';
+	font-weight: lighter;
+	float: left;
+	color: #01CDA0;
+	font-size: 1.75em;
+	top: 431px;
+	left: 674px;
+	position: absolute;
+	transform: rotate(-37.5deg);
+	overflow: hidden;
+	animation: .75s nav_box cubic-bezier(.4,.1,.02,1.29) both;
+	width: 290px;
+	height: 196px;
+	animation-delay: 1s;
+}
+@keyframes nav_box {
+	0%		{transform: translate(-100px,-100px) ; opacity: 0;}
+	75%		{opacity: 1;}
+	100%	{transform: translate(0px,0px);}
+}
+.nav_list {
+	display: inline-block;
+	position: relative;
+	list-style: none;
+	line-height: 53px;
+	transform: rotate(-37.5deg);
+}
+
+.page_section img {
+	display: block;
+	position: absolute;
+}
+
+#nov {
+	position: absolute;
+	top: 33%;
+	left: 40%;
+	transform: translate(-50%, -50%) scale(.6, .6);
+}
+/*.navoptions {
+	animation: .75s navBox cubic-bezier(.4,.1,.02,1.29) both;
+	position: absolute;
+}*/
+
+#dates {
+	font-weight: normal;
+	color: rgba(2,205,160,1.00);
+	position: absolute;
+	transform: rotate(53.5deg);
+	font-size: 4em;
+	top: 50%;
+	left: 7%;	
+	
+}
+#texas {
+	position: absolute;
+	color: white;
+	transform: rotate(-36.5deg);
+	font-size: 19em;
+	top: 27%;
+	left: 54%;
+	
+}
+#sherwood {
+	position: absolute;
+	transform: rotate(-36.5deg);
+	top: 68.5%;
+	left: 18.5%;
+	font-size: 2.25em;
+	font-weight: normal;
+	color: white;
+}
+#mcdade {
+	position: absolute;
+	transform: rotate(-36.5deg);
+	top: 70%;
+	left: 33%;
+	font-size: 3.5em;
+	color: white;
+}
+#corner_decoration {
+	position: absolute;
+	transform: translate(-50%,-50%) scale(.3,.3);
+	top: 14%;
+	left: 10%;
+	float: left;
+}
+.corner_decoration_inverted {
+	position: absolute;
+	transform: translate(-50%,-50%) scale(.3,.3);
+	top: 14%;
+	left: 15%;
+	float: left;
+}
+#lineup_title {
+	width: 70%;
+	font-weight: lighter;
+	color: rgba(2,205,160,1.00);
+	font-size: 4em;
+	top: 115px;
+	position: relative;	
+	margin-left: 185px;
+	text-align: left;
+}
+#lineup_form {
+	width: 70%;
+	margin-left: 0px;
+	margin-right: auto;
+	position: relative;
+	margin-top: 115px;
+	font-size: 1em;
+	color: rgba(2,205,160,1.00);
+}
+#date_dropdown {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5em;	
+	font-weight: 500;
+	text-align: left;
+	opacity: 1;
+	
+}
+.date_spacing {
+	margin-right: 40px;
+	margin-bottom: 0px;
+}
+[type="radio"] { 
+	display:none;
+}
+.band_names {
+	font-size: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: normal;
+	float:left;	
+	opacity: 0;
+	
+}
+#friday_bands {
+	width:27%
+}
+#saturday_bands {
+	width:31%
+}
+.band_spacing {
+	float: left;
+	clear: both;
+	margin-top: 15px;
+	
+}
+.band_picture {
+	height: 625px;
+	width: 400px;
+	position: absolute;
+	clear: both;
+	display: inline-block;
+	right: 0px;
+	bottom: 0px;
+	top: 65px;
+	overflow: hidden;
+}
+#band_info {
+	height: 300px;
+	width: 270px;
+	position: absolute;
+	display: inline-block;
+	right: 400px;
+	bottom: 59px;
+	clear: none;
+	float: right;
+	overflow: hidden;
+	clear: both;
+	color: white;
+	text-align: right;
+	font-weight: normal;
+	padding-bottom: 10px;	
+	padding-right: 10px;
+}
+#band {
+	font-size: 2.5em;
+	padding-bottom: 20px;
+	padding-top: 60px;
+}
+#band_day_info {
+	padding-bottom: 20px;
+	font-size: 1.5em;
+}
+#band_img {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+#band_location {
+}
+#tickets {
+	background-color: rgba(2,205,160,1.00)
+}
+#ticket_title {
+	position: absolute;
+	width: 70%;
+	color: white;
+	font-size: 3.5em;
+	border-bottom: 3px solid rgba(255,255,255,1.00);
+	right: 0%;
+	top: 15%;
+	display: inline-block;
+	font-weight: normal;
+}
+#ticket_price {
+	position: absolute;
+	display: inline-block;
+	right: 20px;
+	bottom: 5px;
+	font-size: .4em;
+}
+#ticket_checklist {
+	margin-bottom: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 23%;
+	color: white;
+	font-size: 1.5em;
+	margin-left: 5%;
+}
+#friday_column {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	line-height: 34px;
+	font-weight: normal;
+	float: left;
+}
+#saturday_column {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	line-height: 34px;
+	font-weight: normal;
+	float: left;
+}
+#sunday_column {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	line-height: 34px;
+	font-weight: normal;
+	float: left;
+}
+h1 {
+	font-size: 1em;
+	padding-bottom: 0px;
+	margin-bottom: -15px;
+	padding-left: 13%;
+}
+.reg_checkbox {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	border: 3px solid #FFFFFF;
+	padding: 9px;
+	display: inline-block;
+	position: relative;
+	transition: .25s ease-out;
+	top: 6px;
+}
+.reg_checkbox:active, .reg_checkbox:active:checked {
+	-webkit-appearance: none;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+}
+.reg_checkbox:hover, .reg_checkbox:checked {
+	transform: scale(1.25,1.25) rotate(-45deg);
+	
+}
+.reg_checkbox:checked {
+	background-color: white;
+	color: white;
+	transform: scale(1,1) rotate(-45deg);
+}
+
+input[type="radio"]:checked+label {
+	opacity: 1;
+}
+input[type="radio"]+label {
+	opacity: 1;
+}
+input[name="show_date"]+label {
+	opacity: 1;
+}
+#ticken_bottom {
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	height: 25%;
+	width: 100%;
+	color: white;
+	font-size: 2.5em;
+	font-weight: normal;
+	text-align: center;
+}
+#total {
+	height: 50%;
+}
+#checkout_section {
+	height: 50%;
+	width: 100%;
+}
+#checkout {
+	position: relative;
+	border: medium solid rgba(255,255,255,1.00);
+	width: 25%;
+	display: inline-block;
+	text-align: center;
+	top: 0px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	transition: .5s ease-in-out;
+}
+#checkout:hover {
+	background-color: white;
+	color: rgba(2,205,160,1.00);
+}
+#checkout_page {
+	background-color: rgba(2,205,160,1.00)
+}
+#billing_title {
+	position: absolute;
+	width: 60%;
+	color: white;
+	font-size: 2em;
+	right: 0%;
+	top: 15%;
+	display: inline-block;
+	font-weight: normal;
+}
+#billing {
+	border-top: medium solid rgba(255,255,255,1.00);
+	margin-left: -30px;
+	padding-top: 24px;
+	padding-left: 30px;
+}
+#sos_form {
+	position: absolute;
+	height: 320px;
+	width: 100%;
+	float: left;
+	clear: both;
+	display: inline-block;
+	top: 28%;
+	text-align: center;
+	padding-top: 15px;
+}
+.form_titles{
+	width: 68%;
+	height: 30px;
+	text-align: left;
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	color: white;
+	font-weight: normal;
+	font-size: 1.5em;
+	margin-top: 10px;
+}
+.large_form {
+	display: inline-block;
+	height: 35px;
+	width: 328px;
+	border: 0;
+	padding-left: 15px;
+}
+.medium_form {
+	display: inline-block;
+	height: 35px;
+	width: 248px;
+	border: 0px;
+	padding-left: 15px;
+
+}
+.small_form {
+	display: inline-block;
+	height: 35px;
+	width: 80px;
+	border: 0;
+	text-align: center;
+}
+input[type='text'] {
+	opacity: 1;
+	color: rgba(2,205,160,1.00);
+	font-size: 1.5em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(2,205,160,1.00);
+	opacity: .5;
+	font-size: 1em;
+	vertical-align: baseline;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(2,205,160,1.00);
+	opacity: .5;
+	font-size: 1em;
+	vertical-align: baseline;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(2,205,160,1.00);
+	opacity: .5;
+	font-size: 1em;
+	vertical-align: baseline;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(2,205,160,1.00);
+	opacity: .5;
+	font-size: 1em;
+	vertical-align: baseline;
+}
+#submit_section {
+	height: 17%;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	display: inline-block;
+	text-align: center;
+}
+#submit {
+	border: medium solid rgba(255,255,255,1.00);
+	width: 25%;
+	display: inline-block;
+	text-align: center;
+	top: 0px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	font-size: 2.5em;
+	color: white;
+	transition: .5s ease-in-out;
+}
+#submit:hover {
+	background-color: white;
+	color: rgba(2,205,160,1.00);
+}
+
+/*Info section*/
+.grizzly_bear_name:after {
+	content: "Grizzly\a Bear";
+	white-space: pre;	
+}
+.grizzly_bear_day_info:after {
+	content: "Friday \a November 10, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.grizzly_bear_location_info:after {
+	content: "Mohaw\a 912 Red River Street\a Austin, TX 78701T";
+}
+.cannibal_corpse_name:after {
+	content: "Cannibal\a Corpse";
+	white-space: pre;
+}
+.cannibal_corpse_day_info:after {
+	content: "Friday \a November 10, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.cannibal_corpse_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.citizen_name:after {
+	content: "Citizen";
+	white-space: pre;
+}
+.citizen_day_info:after {
+	content: "Friday \a November 10, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.citizen_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.washed_out_name:after {
+	content: "Washed\a Out";
+	white-space: pre;
+}
+.washed_out_day_info:after {
+	content: "Friday\a November 10, 2017\a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.washed_out_location_info:after {
+	content: "Mohaw\a 912 Red River Street\a Austin, TX 78701T";
+}
+.lindstrom_name:after {
+	content: "Lindstrom";
+	white-space: pre;
+}
+.lindstrom_day_info:after {
+	content: "Friday \a November 10, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.lindstrom_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.noname_name:after {
+	content: "Noname";
+	white-space: pre;
+}
+.noname_day_info:after {
+	content: "Saturday \a November 11, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.noname_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.story_so_far_name:after {
+	content: "The Story\a So Far";
+	white-space: pre;
+	
+}
+.story_so_far_day_info:after {
+	content: "Saturday \a November 11, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+	
+}
+.story_so_far_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+	
+}
+.japandroids_name:after {
+	content: "JAPAN\a DROIDS";
+	white-space: pre;
+}
+.japandroids_day_info:after {
+	content: "Saturday \a November 11, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.japandroids_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.yelle_name:after {
+	content: "Yelle";
+	white-space: pre;
+	
+}
+.yelle_day_info:after {
+	content: "Saturday \a November 11, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+	
+}
+
+.yelle_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.frights_name:after {
+	content: "The\a Frights";
+	white-space: pre;
+	
+}
+.frights_day_info:after {
+	content: "Saturday \a November 11, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.frights_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.helms_alee_name:after {
+	content: "Helms\a Alee";
+	white-space: pre;
+}
+.helms_alee_day_info:after {
+	content: "Saturday \a November 11, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.helms_alee_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.boris_name:after {
+	content: "Boris";
+	white-space: pre;
+}
+.boris_day_info:after {
+	content: "Sunday \a November 12, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.boris_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.snow_tha_product_name:after {
+	content: "Snow Tha\a Product";
+	white-space: pre;
+}
+.snow_tha_product_day_info:after {
+	content: "Sunday \a November 12, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.snow_tha_product_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.shins_name:after {
+	content: "The Shins";
+	white-space: pre;
+}
+.shins_day_info:after {
+	content: "Sunday \a November 12, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.shins_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.ariel_pink_name:after {
+	content: "Ariel Pink";
+	white-space: pre;
+}
+.ariel_pink_day_info:after {
+	content: "Sunday \a November 12, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.ariel_pink_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+.hot_chip_name:after {
+	content: "Hot Chip";
+	white-space: pre;
+}
+.hot_chip_day_info:after {
+	content: "Sunday \a November 12, 2017 \a Doors at 9:30 PM CST";
+	white-space: pre;
+}
+.hot_chip_location_info:after {
+	content: "Mohaw \a 912 Red River Street \a Austin, TX 78701T";
+}
+#thank_you {
+	width: 100%;
+	text-align: center;
+	font-size: 3em;
+	padding-top: 70px;
+	color: rgba(2,205,160,1.00);
+	
+}
+#counter {
+	width: 100%;
+	text-align: center;
+	font-size: 5em;
+	color: rgba(2,205,160,1.00);
+}
+#counter, #thank_you {
+	animation: 1s thankyou cubic-bezier(.21,1.06,.43,1.25) both;
+}
+@keyframes thankyou {
+	0%		{transform: translateY(-300px) ; opacity: 0;}
+	75%		{opacity: 1;}
+	100%	{transform: translateY(0px);}
+}#page_wrapper {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+@media screen and (min-width:1101px) and (max-width:1500px){
+}
+
+@media screen and (min-width:800px) and (max-width:1100px){
+	body {
+	position: relative;
+	left: -117px;
+	top: -712px;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+	float: left;
+	margin-top: 0px;
+	}
+	#page_wrapper {
+		width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		transform: scale(.7);
+	}
+	
+}
+
+
+@media screen and (max-width:800px){
+	body {
+	position: relative;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+	float: left;
+	margin-top: 0px;
+	left: -220px;
+	top: -422px;
+	}
+	#page_wrapper {
+		transform: scale(.77);
+	}
+	#lineup {
+	left: 81px;
+	}
+}

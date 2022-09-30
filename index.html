@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound on Sound Fest</title>
+<link href="sos.css" rel="stylesheet" type="text/css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+
+<body>
+<div id="page_wrapper">
+  <div class="page_section" id="landing_page">
+    <header class="header">
+      <img src="image_assets/background_triangle.svg" alt=""/>
+      <div id="sound_on">Sound<span class="small_title_text"> On</span></div>
+      <div id="sound_fest">Sound<span class="small_title_text"> Fest</span></div>
+    </header>
+
+
+
+    <div class="nav_box">
+      <ul class="nav_list">
+        <a href="#info"><li>Info</li></a>
+        <a href="#lineup"><li>Lineup</li></a>
+        <a href="#tickets"><li>Tickets</li></a>
+        </ul>
+
+      </div>
+  </div>
+
+  <div class="page_section" id="info">
+    <img src="image_assets/background_triangle_2.svg" alt=""/>
+    <img src="image_assets/nov.svg" alt="" id="nov"/>
+    <div id="dates">
+      10-12
+      </div>
+    <div id="texas">
+      TX
+      </div>
+    <div id="sherwood">
+      Sherwood Forest Fair
+      </div>
+    <div id="mcdade">
+      McDade
+      </div>
+  </div>
+
+  <div class="page_section" id="lineup">
+    <img src="image_assets/background_triangle_2.svg" alt=""/>
+    <img src="image_assets/corner_decoration.svg" alt="" id="corner_decoration"/>
+    <div id="lineup_title">
+      Lineup
+      </div>
+  <form id="lineup_form">
+
+    <div id="date_dropdown">
+      <input type="radio" name="showdate" value="friday" id="friday" onchange="dateChange()">
+      <label class="date_spacing" for="friday">Friday 11/10</label>
+
+      <input type="radio" name="showdate" value="saturday" id="saturday" onchange="dateChange()">
+      <label class="date_spacing" for="saturday"> Saturday 11/11</label>
+
+      <input type="radio" name="showdate" value="sunday" id="sunday" onchange="dateChange()">
+      <label class="date_spacing" for="sunday">Sunday 11/12</label>
+      </div>
+
+    <div class="band_names" id="friday_bands">
+
+      <input type="radio" name="lineup" value="grizzly_bear" id="grizzly_bear">
+      <label class="band_spacing" for="grizzly_bear">Grizzly Bear</label>
+
+      <input type="radio" name="lineup" value="cannibal_corpse" id="cannibal_corpse">
+      <label class="band_spacing" for="cannibal_corpse">Cannibal Corpse</label>
+
+      <input type="radio" name="lineup" value="citizen" id="citizen">
+      <label class="band_spacing" for="citizen"> Citizen</label>
+
+      <input type="radio" name="lineup" value="washed_out" id="washed_out">
+      <label class="band_spacing" for="washed_out">Washed Out</label>
+
+      <input type="radio" name="lineup" value="lindstrom" id="lindstrom">
+      <label class="band_spacing" for="lindstrom">Lindstrom</label>
+      </div>
+
+    <div class="band_names" id="saturday_bands">
+      <input type="radio" name="lineup" value="noname" id="noname">
+      <label class="band_spacing" for="noname">Noname</label>
+
+      <input type="radio" name="lineup" value="story_so_far" id="story_so_far">
+      <label class="band_spacing" for="story_so_far"> The Story So Far</label>
+
+      <input type="radio" name="lineup" value="japandroids" id="japandroids">
+      <label class="band_spacing" for="japandroids"> JAPANDROIDS</label>
+
+      <input type="radio" name="lineup" value="yelle" id="yelle">
+      <label class="band_spacing" for="yelle">Yelle</label>
+
+      <input type="radio" name="lineup" value="frights" id="frights">
+      <label class="band_spacing" for="frights">The Frights</label>
+
+      <input type="radio" name="lineup" value="helms_alee" id="helms_alee">
+      <label class="band_spacing" for="helms_alee"> Helms Alee</label>
+
+      </div>
+    <div class="band_names" id="sunday_bands">
+      <input type="radio" name="lineup" value="boris" id="boris">
+      <label class="band_spacing" for="boris">  Boris</label>
+
+      <input type="radio" name="lineup" value="snow_tha_product" id="snow_tha_product">
+      <label class="band_spacing" for="snow_tha_product">Snow Tha Product</label>
+
+      <input type="radio" name="lineup" value="shins" id="shins">
+      <label class="band_spacing" for="shins">The Shins</label>
+
+      <input type="radio" name="lineup" value="ariel_pink" id="ariel_pink">
+      <label class="band_spacing" for="ariel_pink">Ariel Pink</label>
+
+      <input type="radio" name="lineup" value="hot_chip" id="hot_chip">
+      <label class="band_spacing" for="hot_chip">Hot Chip</label>
+
+      </div>
+
+    </form>
+
+    <div class="band_picture">
+      <img src="image_assets/artists/" alt="" id="band_img">
+    </div>
+    <div id="band_info">
+      <div id="band">
+
+      </div>
+      <div id="band_day_info">
+
+      </div>
+      <div id="band_location">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="page_section" id="tickets">
+    <img src="image_assets/inverted_corner_decoration.svg" alt="" class="corner_decoration_inverted"/>
+    <div id="ticket_title">Tickets
+      <div id="ticket_price">General Admission $23 Each</div>
+    </div>
+    <ul id="ticket_checklist">
+      <li id="friday_column">
+        <h1>11/10</h1>
+        <div>
+          <p>
+
+            <input type="checkbox" name="11/10" value="23" id="grizzly_bear2" class="reg_checkbox">
+            <label>Grizzly Bear</label>
+
+            <br>
+
+            <input type="checkbox" name="11/10" value="23" id="cannibal_corpse2" class="reg_checkbox">
+            <label>Cannibal Corpse</label>
+
+            <br>
+
+            <input type="checkbox" name="11/10" value="23" id="citizen2" class="reg_checkbox">
+            <label>Citizen</label>
+
+            <br>
+
+            <input type="checkbox" name="11/10" value="23" id="washed_out2" class="reg_checkbox">
+            <label>Washed Out</label>
+
+            <br>
+
+            <input type="checkbox" name="11/10" value="23" id="lindstrom2" class="reg_checkbox">
+            <label>Lindstrom</label>
+
+          </p>
+        </div>
+      </li>
+      <li id="saturday_column">
+        <h1>11/11</h1>
+        <div>
+          <p>
+
+            <input type="checkbox" name="11/11" value="23" id="noname2" class="reg_checkbox">
+            <label>Noname</label>
+            <br>
+
+            <input type="checkbox" name="11/11" value="23" id="story_so_far2" class="reg_checkbox">
+            <label>The Story So Far</label>
+            <br>
+
+            <input type="checkbox" name="11/11" value="23" id="japandroids2" class="reg_checkbox">
+            <label>JAPANDROIDS</label>
+            <br>
+
+            <input type="checkbox" name="11/11" value="23" id="yelle2" class="reg_checkbox">
+            <label>Yelle</label>
+            <br>
+
+            <input type="checkbox" name="11/11" value="23" id="frights2" class="reg_checkbox">
+            <label>The Frights</label>
+            <br>
+
+            <input type="checkbox" name="11/11" value="23" id="helms_alee2" class="reg_checkbox">
+            <label>Helms Alee</label>
+
+            <br>
+          </p>
+          </div>
+      </li>
+      <li id="sunday_column">
+        <h1>11/12</h1>
+        <div>
+          <p>
+
+            <input value="23" type="checkbox" name="11/12" id="boris2" class="reg_checkbox">
+            <label>Boris</label>
+            <br>
+
+            <input value="23" type="checkbox" name="11/12" id="snow_tha_product2" class="reg_checkbox">
+            <label>Snow Tha Product</label>
+            <br>
+
+            <input value="23" type="checkbox" name="11/12" id="shins2" class="reg_checkbox">
+            <label>The Shins</label>
+            <br>
+
+            <input value="23" type="checkbox" name="11/12" id="ariel_pink2" class="reg_checkbox">
+            <label>Ariel Pink</label>
+            <br>
+
+            <input value="23" type="checkbox" name="11/12" id="hot_chip2" class="reg_checkbox">
+            <label>Hot Chip</label>
+
+            <br>
+          </p>
+          </div>
+      </li>
+    </ul>
+
+    <div id="ticken_bottom">
+      <div id="total">
+        Total: $<span id="payment_total">0</span>
+        </div>
+      <div id="checkout_section">
+        <a href="#checkout_page"><div id="checkout">
+          Checkout
+        </div></a>
+        </div>
+    </div>
+
+  </div>
+  <div class="page_section" id="checkout_page">
+    <img src="image_assets/inverted_corner_decoration.svg" alt="" class="corner_decoration_inverted"/>
+    <div id="billing_title">
+      Total: $<span id="payment_total2">0</span>
+      <div id="billing">Billing Info</div>
+      </div>
+    <div id="sos_form">
+      <div class="form_titles">Name</div>
+      <br>
+      <input type="text" name="firstname" placeholder="First Name" class="large_form" required>
+      <input type="text" name="lastname" placeholder="Last Name" class="large_form">
+      <div class="form_titles">Address</div>
+      <br>
+      <input type="text" name="street" placeholder="Street" class="large_form">
+      <input type="text" name="city" placeholder="City" class="medium_form">
+      <input type="text" name="zip" placeholder="Zip" class="small_form">
+      <div class="form_titles">Payment</div> <br>
+      <input type="text" name="cardnumber" placeholder="Card Number" class="large_form">
+      <input type="text" name="expdate" placeholder="Expiration Date" class="medium_form">
+      <input type="text" name="csc" placeholder="CSC" class="small_form">
+      <div class="form_titles">Contact</div> <br>
+      <input type="text" name="email" placeholder="Email" class="large_form">
+      <input type="text" name="confirmemail" placeholder="Confirm Email" class="large_form">
+      </div>
+    <div id="submit_section">
+      <div id="submit">
+        <a href="thank_you_page.html">Submit</a>
+        </div>
+      </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/headroom.min.js"></script>
+  <script>
+	var scroll = new SmoothScroll('a[href*="#"]', {
+		speed: 700, // Integer. How fast to complete the scroll in milliseconds
+		offset: 0, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+		easing: 'easeInCubic', // Easing pattern to use
+	});
+</script>
+  <script>
+
+</script>
+  <script src="js/headroom.min.js"></script>
+  <script src="js/headroom.js"></script>
+  <script>
+	var header = document.querySelector("header");
+	var headroom = new Headroom(header_small);
+		"offset": 250;
+		"tolerance": 20px;
+
+		"classes": {
+			"initial": "animated";
+			"pinned": "slideDown";
+			"unpinned": "slideUp";
+		}
+	headroom.init();
+
+</script>
+  <script>
+	 			function dateChange() {
+				var datevalue = $('input[name="showdate"]:checked').val();
+				console.log(datevalue);
+				if (datevalue == "friday") {
+					$("#friday_bands").css("opacity", "1");
+					$("#saturday_bands").removeAttr("style");
+					$("#sunday_bands").removeAttr("style");
+				} else if (datevalue == "saturday") {
+					$("#saturday_bands").css("opacity", "1");
+					$("#friday_bands").removeAttr("style");
+					$("#sunday_bands").removeAttr("style");
+				} else if (datevalue == "sunday") {
+					$("#sunday_bands").css("opacity", "1");
+					$("#friday_bands").removeAttr("style");
+					$("#saturday_bands").removeAttr("style");
+				} else {
+
+				}
+			};
+</script>
+  <script>
+		function updateTotals() {
+			var inputs = document.getElementById('ticket_checklist').getElementsByTagName('input');
+
+			var sum = 0;
+			for (var i = 0, num = inputs.length; i < num; i++) {
+        if (inputs[i].checked) {
+            sum += parseInt(inputs[i].getAttribute('value'));
+        }
+    }
+		    document.getElementById('payment_total').innerHTML = sum;
+		}
+</script>
+  <script>
+		var section = document.getElementById('ticket_checklist');
+		var inputs = section.getElementsByTagName('input');
+
+		for (var i = 0, num = inputs.length; i < num; i++) {
+			inputs[i].addEventListener('change', updateTotals);
+}
+</script>
+</div>
+
+
+<script>
+	$('input[name="lineup"]').change(function(){
+		var artistName = $('input[name="lineup"]:checked').val();
+		console.log(artistName);
+		$('#band_img').fadeOut(200, function(){
+			$('#band_img').attr("src", 'image_assets/artists/' + artistName + '.png');
+			$('#band_info').fadeOut(200, function(){
+				$('#band').removeClass().addClass(artistName + "_name");
+				$('#band_day_info').removeClass().addClass(artistName + "_day_info");
+				$('#band_location').removeClass().addClass(artistName + "_location_info");
+				$('#band_info').fadeIn(200);
+			})
+			$('#band_img').fadeIn(200);
+		});
+
+
+
+
+	});
+</script>
+</body>
+</html>
